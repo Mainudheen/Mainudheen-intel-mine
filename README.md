@@ -1,105 +1,120 @@
-# Intel Bug Detection Project
+# 🔍 Intel Bug Detection Hub
 
-An AI-powered tool for detecting and analyzing bugs in code using machine learning techniques, developed with support from Intel.
+[![Deployment Status](https://img.shields.io/badge/Model-Hugging_Face-success)](https://huggingface.co/MainuDheen/intel-bug-detection)
+[![GitHub](https://img.shields.io/badge/Repository-GitHub-blue)](https://github.com/Mainudheen/Mainudheen-intel-mine)
 
-## Project Overview
-This project leverages advanced machine learning models to detect potential bugs in source code, helping developers identify and fix issues early in the development process. The system uses transformer-based architecture to analyze code patterns and identify potential vulnerabilities.
+> Advanced code analysis powered by AI - detect bugs, analyze vulnerabilities, get intelligent fixes
 
-## Repository Contents
-- `bug_detector_model/`: Model configuration and inference code
-- `data/`: Training and testing datasets
-- `src/`: Source code files
-- `utils/`: Utility functions and helper scripts
-- `results/`: Output directory for analysis results
+## 🚀 Quick Start
 
-## Setup Instructions
+### Option 1: Use the Model Directly (Recommended)
 
-### 1. Clone the Repository
+The model is fully deployed and ready to use:
+- **Model**: Available at [Hugging Face Hub](https://huggingface.co/MainuDheen/intel-bug-detection)
+- **Size**: 475.52 MB
+- **Performance**: 94% accuracy on test set
+
+### Option 2: Run Locally
+
 ```bash
+# Clone the repository
 git clone https://github.com/Mainudheen/Mainudheen-intel-mine.git
+
+# Navigate to project directory
 cd Mainudheen-intel-mine
-```
 
-### 2. Download the Model
-The model file is hosted separately due to size limitations.
-- Download `model.safetensors` (475.52 MB) from:
-  https://huggingface.co/MainuDheen/intel-bug-detection/resolve/main/model.safetensors
-- Place it in the `bug_detector_model/` directory
-
-### 3. Install Dependencies
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Download model
+# Place model.safetensors in bug_detector_model/
+
+# Commands to run
+python bug-detection.py
 ```
 
-Required packages:
-- torch>=1.9.0
-- transformers>=4.0.0
-- numpy>=1.19.5
-- pandas>=1.3.0
+---
 
-## Usage
+### ML Model Access
 
-### 1. Prepare Your Code
-- Place the code you want to analyze in the `input/` directory
-- Supported file formats:
-  - Python (.py)
-    
+> ⚠️ **Important**: The model must be downloaded from Hugging Face for optimal performance.
 
-### 2. Run the Bug Detection
+To access the model:
+1. Visit [intel-bug-detection](https://huggingface.co/MainuDheen/intel-bug-detection)
+2. Download `model.safetensors`
+3. Place in `bug_detector_model/` directory
+
+## 🌟 Key Features
+
+- **AI-Powered Bug Detection** - Get intelligent insights from code analysis
+- **Multi-Language Support** - Python
+- **Real-time Analysis** - Quick and efficient code scanning
+- **Detailed Reports** - Comprehensive bug analysis and fix suggestions
+
+---
+
+## 🏗️ Architecture
+
+The project uses a two-tier architecture:
+
+1. **Frontend**: Web interface with templates and static assets
+2. **ML Backend**: PyTorch with Transformer models
+
+
+
+## 📋 Documentation
+
+Required environment setup:
+
+#### Python Environment
+```python
+# Required packages in requirements.txt
+torch>=1.9.0
+transformers>=4.0.0
+numpy>=1.19.5
+pandas>=1.3.0
+```
+
+## 🔄 Project Structure
+
+
 ```bash
-python main.py --input_file your_code.py
+intel-mine/
+├── bug_detector_model/              # Model and inference code
+│   ├── model.safetensors           # Main model file (475.52 MB)
+│   └── config.json                 # Model configuration
+│
+├── errors/                         # Error handling
+│   ├── __init__.py
+│   └── error_handlers.py
+│
+├── static/                         # Static assets
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+│       └── architecture.png
+│
+├── templates/                      # HTML templates
+│   ├── index.html
+│   ├── results.html
+│   └── error.html
+│
+├── webapp/                         # Web application
+│   ├── __init__.py
+│   ├── routes.py
+│   └── utils.py
+│
+├── input/                         # Input code files
+│   └── sample_test.py
+│
+├── results/                       # Analysis output
+│   └── bug_reports/
+│
+├── .gitignore                     # Git ignore file
+├── README.md                      # Project documentation
+├── requirements.txt               # Project dependencies
+└── bug-detection.py              # Main application script
 ```
-
-### 3. View Results
-- Results are saved in the `results/` directory
-- Output includes:
-  - Detailed bug reports
-  - Code suggestions
-  - Confidence scores
-  - Line numbers for identified issues
-
-## Features
-- Static code analysis
-- Machine learning-based bug detection
-- Real-time code scanning
-- Detailed bug reports and suggestions
-- Support for multiple programming languages
-- High accuracy and low false-positive rate
-- GPU acceleration support
-
-
-## Model Information
-- Name: Intel Bug Detection Model
-- Type: Neural Bug Detection
-- Size: 475.52 MB
-- Framework: PyTorch
-- Base Architecture: Transformer
-- Training Dataset: Proprietary bug detection dataset
-- Accuracy: 94% on test set
-- False Positive Rate: <5%
-
-## Performance
-- CPU Mode: ~2-3 files per second
-- GPU Mode: ~10-15 files per second
-- Memory Usage: 4-6GB RAM during operation
-- Supported file sizes: Up to 1MB per file
-
-  
-## Troubleshooting
-Common issues and solutions:
-1. Model loading error:
-   - Verify model file is in correct location
-   - Check file permissions
-2. CUDA errors:
-   - Verify CUDA installation
-   - Update GPU drivers
-3. Memory issues:
-   - Reduce batch size
-   - Close other applications
-
-## Contact
-For support and queries:
-- GitHub: [@Mainudheen](https://github.com/Mainudheen)
-- Project Repository: [intel-mine](https://github.com/Mainudheen/Mainudheen-intel-mine)
-- Model Repository: [intel-bug-detection](https://huggingface.co/MainuDheen/intel-bug-detection)
 
