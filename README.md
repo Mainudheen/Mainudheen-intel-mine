@@ -92,3 +92,8 @@ For any queries or support, please contact:
    ```
    bug_detector_model/model.safetensors
    ```
+## Model Download
+The model file (model.safetensors) can be downloaded from:
+https://huggingface.co/MainuDheen/intel-bug-detection/resolve/main/model.safetensors
+
+Place the downloaded file in the `bug_detector_model` directory.
