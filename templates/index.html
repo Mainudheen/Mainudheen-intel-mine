@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Bug Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-bug"></i> Python Bug Detection</h1>
+            <p class="subtitle">Find and fix bugs in your Python code instantly!</p>
+        </header>
+
+        <div class="main-content">
+            <div class="code-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-code"></i> Your Code</h2>
+                </div>
+                <textarea id="code" placeholder="Enter your Python code here..."></textarea>
+            </div>
+
+            <div class="button-section">
+                <button id="detect" class="primary-button">
+                    <i class="fas fa-search"></i> Detect Bugs
+                </button>
+                <button id="clear" class="secondary-button">
+                    <i class="fas fa-trash"></i> Clear
+                </button>
+            </div>
+
+            <div class="results-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> Results</h2>
+                    <div class="stats">
+                        <span id="error-count" class="stat-item">
+                            <i class="fas fa-exclamation-circle"></i> Errors: 0
+                        </span>
+                        <span id="line-count" class="stat-item">
+                            <i class="fas fa-code-branch"></i> Lines: 0
+                        </span>
+                    </div>
+                </div>
+                <div id="results" class="results-container">
+                    <div class="welcome-message">
+                        <i class="fas fa-robot"></i>
+                        <p>Enter your Python code and click "Detect Bugs" to start!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Elements -->
+    <div id="celebration" class="celebration hidden">
+        <div class="confetti-container"></div>
+        <div class="success-message">
+            <i class="fas fa-trophy"></i>
+            <h2>Congratulations!</h2>
+            <p>Your code is bug-free!</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/confetti-js/0.0.18/confetti.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 

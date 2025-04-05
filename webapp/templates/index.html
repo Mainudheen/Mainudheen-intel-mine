@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Bug Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/firework.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="firework-container">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+    </div>
+    <div class="container">
+        <h1>Python Bug Detection</h1>
+        <div class="editor-container">
+            <textarea id="code-editor"></textarea>
+        </div>
+        <div class="button-container">
+            <button onclick="detectBugs()">Detect Bugs</button>
+            <button onclick="clearEditor()">Clear</button>
+        </div>
+        <div class="results-container">
+            <div class="error-display">
+                <h2>Errors Found:</h2>
+                <div id="error-list"></div>
+            </div>
+            <div class="error-stats">
+                <h2>Error Statistics</h2>
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <span class="stat-label">Syntax Errors:</span>
+                        <span id="syntax-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Runtime Errors:</span>
+                        <span id="runtime-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Potential Errors:</span>
+                        <span id="potential-count" class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
