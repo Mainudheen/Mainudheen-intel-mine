@@ -83,3 +83,12 @@ For any queries or support, please contact:
 ## Acknowledgments
 - Intel for project support
 - [Any other acknowledgments]
+
+4.# Model Download Instructions
+
+1. Download the model file from: https://huggingface.co/YOUR_USERNAME/intel-bug-detector/blob/main/model.safetensors
+
+2. Place the downloaded file in:
+   ```
+   bug_detector_model/model.safetensors
+   ```
