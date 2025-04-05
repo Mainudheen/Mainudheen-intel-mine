@@ -1,4 +1,4 @@
- # Environment variables
+# Environment variables
 .env
 
 # Python
@@ -27,3 +27,6 @@ build/
 
 # Project specific
 results/
+
+# Large model files
+bug_detector_model/model.safetensors
