@@ -43,20 +43,11 @@ Required packages:
 - Place the code you want to analyze in the `input/` directory
 - Supported file formats:
   - Python (.py)
-  - JavaScript (.js)
-  - Java (.java)
-  - C++ (.cpp)
+    
 
 ### 2. Run the Bug Detection
 ```bash
 python main.py --input_file your_code.py
-```
-
-Optional arguments:
-```bash
---model_path: Path to model file (default: bug_detector_model/model.safetensors)
---output_dir: Directory for results (default: results/)
---verbose: Enable detailed output (default: False)
 ```
 
 ### 3. View Results
@@ -76,13 +67,6 @@ Optional arguments:
 - High accuracy and low false-positive rate
 - GPU acceleration support
 
-## Technical Requirements
-- Python 3.8 or higher
-- PyTorch 1.9+
-- Transformers library
-- CUDA 11.0+ (optional, for GPU support)
-- 8GB RAM minimum (16GB recommended)
-- 2GB free disk space (excluding model file)
 
 ## Model Information
 - Name: Intel Bug Detection Model
@@ -100,23 +84,7 @@ Optional arguments:
 - Memory Usage: 4-6GB RAM during operation
 - Supported file sizes: Up to 1MB per file
 
-## License
-MIT License
-
-Copyright (c) 2024 MainuDheen
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes:
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
+  
 ## Troubleshooting
 Common issues and solutions:
 1. Model loading error:
@@ -135,8 +103,3 @@ For support and queries:
 - Project Repository: [intel-mine](https://github.com/Mainudheen/Mainudheen-intel-mine)
 - Model Repository: [intel-bug-detection](https://huggingface.co/MainuDheen/intel-bug-detection)
 
-## Acknowledgments
-- Intel for project support and guidance
-- The open-source community
-- PyTorch team
-- Hugging Face for model hosting
